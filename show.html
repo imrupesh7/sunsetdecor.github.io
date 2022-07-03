@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1def09dae5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        header {
+    width: 100%;
+    height: 10rem;
+    padding: 0  5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    margin-top: 4rem ;
+    top: 0;
+    left: 0;
+    background: var(--second-color);
+    z-index: 99999999999999999999999;
+    background: #000;
+  }
+  
+  header .logo {
+   width: 30%;
+   height: 80%;
+  }
+  
+  
+  header nav {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--third-color);
+    cursor: pointer;
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul li a {
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+    color: var(--third-color);
+    color: white;
+  }
+  
+  header nav ul li a.active,
+  header nav ul li a:hover {
+    color: var(--main-color);
+  }
+
+  @media (max-width:991px) {
+
+
+
+html {
+    font-size: 55%;
+}
+
+#fa-bars {
+    display: block;
+    margin: 0 1.5rem;
+    color: white;
+  }
+
+
+  header nav ul {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 10rem;
+    left: -100%;
+    text-align: center;
+    background: var(--second-color);
+  }
+
+  header nav ul li {
+    margin: 2rem 0;
+  }
+
+  header nav ul li:first-child{
+      margin-top: 10rem;
+  }
+
+  header nav ul li a{
+    font-size: 2rem;
+  }
+
+  header nav ul li a:hover{
+      letter-spacing: 2px;
+  }
+
+  .menujs {
+    top: 10rem;
+    left: 0%;
+  }}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.svg" class="logo">
+
+        <nav>
+            <ul>
+                <li> <a href="#home" class="active"> HOME </a></li>
+                <li> <a href="#about"> ABOUT </a></li>
+                <li> <a href="#service"> SERVICE</a></li>
+                <li> <a href="#project"> PROJECT</a></li>
+                <li> <a href="#contact"> CONTACT </a></li>
+
+                
+        <div class="follow">
+            <a href="https://www.facebook.com/rick.roy.94695459" target="_#blank" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/imrupeshjha7" target="_#blank" class="fab fa-twitter"></a>
+            <a href="https://instagram.com/imripesh7" target="_#blank" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/rupesh-jha-74b85721b " target="_#blank"
+                class="fab fa-linkedin"></a>
+        </div>
+
+            </ul>
+            <a href="#inner1" id="meeting"> MAKE APPOINTMENT</a>
+            <i class="fas fa-bars" id="fa-bars"></i>
+
+        </nav>
+    </header>
+
+    <script>
+        var menu = document.querySelector("#fa-bars");
+var header = document.querySelector("header nav ul");
+
+menu.onclick = () => {
+  menu.classList.toggle("fa-times");
+  header.classList.toggle("menujs");
+}
+
+    </script>
+</body>
+</html>
