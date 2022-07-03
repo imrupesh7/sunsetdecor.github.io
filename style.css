@@ -1,0 +1,1831 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.5s;
+    outline: none;
+}
+
+body {
+    background-color: #000;
+}
+
+::selection {
+    background: #ffa15f95;
+}
+
+:root {
+    --main-color: #c4ab6e;
+    --second-color: #000;
+    --third-color: #fff;
+    --four-color: #b1b1b1;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: wilk;
+    src: url(font/Wilkysta.otf);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 10rem;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    margin-top: 4rem;
+    top: 0;
+    left: 0;
+    background: var(--second-color);
+    z-index: 99999999999999999999999;
+    background: #000;
+}
+
+header .logo {
+    width: 30%;
+    height: 80%;
+}
+
+
+header nav {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--third-color);
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: right;
+  
+}
+
+header nav ul li a {
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+    color: var(--third-color);
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: var(--main-color);
+}
+
+
+#fa-bars {
+    display: none;
+}
+
+
+#meeting {
+    padding: 1rem 1.8rem;
+    color: var(--main-color);
+    display: inline-block;
+    border: 0.2rem solid var(--main-color);
+}
+
+#meeting:hover {
+    color: var(--third-color);
+    background: var(--main-color);
+}
+
+
+.follow {
+    display: none;
+}
+
+
+#home {
+    width: 100%;
+    height: 80vh;
+}
+
+
+.topbar {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.2)
+}
+
+.topbar-contact {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.topbar-contact ul {
+    display: flex;
+}
+
+.topbar-contact ul li {
+    margin: 0 1rem;
+}
+
+.topbar-contact ul li a {
+    font-size: 1.2rem;
+    color: var(--four-color);
+}
+
+.topbar-contact ul li:first-child {
+    margin: 0 0;
+}
+
+.topbar-contact ul li:last-child {
+    margin: 0 0;
+}
+
+.topbar-contact ul li i {
+    color: var(--four-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.topbar-contact ul li a:hover {
+    color: var(--main-color);
+}
+
+.topbar-social {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topbar-social ul {
+    display: flex;
+    justify-content: right;
+}
+
+.topbar-social ul li {
+    margin: 0 1rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topbar-social ul li a {
+    font-size: 1.2rem;
+    color: var(--four-color);
+}
+
+.topbar-social ul li:last-child {
+    margin: 0 0 0 1rem;
+}
+
+.topbar-social ul li:hover a {
+    color: var(--third-color);
+}
+
+.topbar-social ul li:hover:nth-child(1) {
+    background-color: #4267B2;
+    color: var(--third-color);
+}
+
+.topbar-social ul li:hover:nth-child(2) {
+    background-color: #00acee;
+    color: var(--third-color);
+}
+
+
+.topbar-social ul li:hover:nth-child(3) {
+    background-color: #8a3ab9;
+    color: var(--third-color);
+}
+
+.topbar-social ul li:hover:nth-child(4) {
+    background-color: #0077b5;
+    color: var(--third-color);
+}
+
+
+
+
+
+
+
+
+
+/* 2 */
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.myslide {
+    height: 80vh;
+    display: none;
+    overflow: hidden;
+}
+
+
+.dotsbox {
+    position: absolute;
+    left: 5%;
+    transform: translate(0%);
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* /2 */
+
+/* javascript */
+.active,
+.dot:hover {
+    border-color: var(--main-color);
+    /* blue */
+}
+
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0.8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+/* 3 */
+.txt {
+    position: absolute;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 20%;
+    left: 5%;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 9999999;
+}
+
+
+@keyframes posi {
+    from {
+        left: 15%;
+    }
+
+    to {
+        left: 5%;
+    }
+}
+
+.txt h1 {
+    color: var(--third-color);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: wilk;
+    font-weight: 100;
+    line-height: 4.5rem;
+}
+
+.txt h1 span {
+    font-size: 6rem;
+    font-family: wilk;
+    color: var(--main-color);
+}
+
+.txt p {
+    width: fit-content;
+    font-size: 2.5rem;
+    color: var(--third-color);
+    font-weight: lighter;
+}
+
+.txt p::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--third-color);
+}
+
+.txt a {
+    padding: 0.3rem 3rem;
+    color: var(--main-color);
+    display: inline-block;
+    border: 0.2rem solid var(--main-color);
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.txt a:hover {
+    color: var(--third-color);
+    background: var(--main-color);
+}
+
+
+#img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+
+@keyframes zoomin {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.mouse-content {
+    width: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2rem;
+    right: 0%;
+    color: var(--third-color);
+    font-size: 1rem;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+}
+
+.mouse {
+    width: 2.5rem;
+    height: 5rem;
+    border: 0.2rem solid var(--third-color);
+    border-radius: 20px;
+    display: flex;
+}
+
+.mouse-wheel {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--third-color);
+    margin: auto;
+    animation: mouse-wheel 1s linear infinite;
+}
+
+@keyframes mouse-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+.home-form {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    width: 35rem;
+    height: 40rem;
+    background-color: var(--third-color);
+    border-radius: 1rem;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: black;
+    box-shadow: 1rem 1rem var(--main-color);
+}
+
+.home-form h6 {
+    font-size: 2.5rem;
+    padding-left: 10%;
+
+}
+
+.home-form p {
+    text-align: center;
+    font-size: 0.9rem;
+
+}
+
+.home-form span {
+    color: var(--main-color);
+}
+
+.home-form input {
+    width: 80%;
+    height: 4rem;
+    margin: 1% 10%;
+    border: none;
+    border-bottom: 0.2rem solid var(--four-color);
+    color: var(--four-color);
+}
+
+.home-form textarea {
+    width: 80%;
+    height: 10rem;
+    margin: 1% 10%;
+    border: none;
+    border-bottom: 0.2rem solid var(--four-color);
+    color: var(--four-color);
+}
+
+.home-form input:focus {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+.home-form textarea:focus {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+#form-submit {
+    background: var(--four-color);
+    border-radius: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+#form-submit:hover {
+    background: var(--main-color);
+}
+
+
+#about {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url(img/inspiration-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 10%;
+    padding-bottom: 5px;
+    margin: 50px 0;
+
+}
+
+.about-para {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+    margin: 5rem 0;
+}
+
+.abouth1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--third-color);
+    color: white;
+}
+
+
+.abouth1 h1 {
+    font-weight: lighter;
+}
+
+.abouth1 h1 span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.abouth1 h1:before,
+.abouth1 h1:after {
+    background-color: var(--third-color);
+    content: "";
+    display: inline-block;
+    height: 0.2rem;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+    border-radius: 1rem;
+}
+
+.abouth1 h1:before {
+    right: 1rem;
+}
+
+.abouth1 h1:after {
+    left: 2rem;
+}
+
+
+.about1 {
+    width: 55%;
+    height: auto;
+}
+
+.about1 p {
+    font-size: 1.6rem;
+    text-align: justify;
+    color: var(--four-color);
+    letter-spacing: 0.1rem;
+    position: relative;
+    font-weight: 300;
+}
+
+
+.about1 p::before,
+.about1 p::after {
+    content: " ";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: 0.7rem solid var(--main-color);
+    z-index: 1;
+}
+
+
+.about1 p::before {
+    top: -1.5rem;
+    left: -1.5rem;
+    border-width: 0.5rem 0 0 0.5rem;
+}
+
+.about1 p::after {
+    bottom: -1.5rem;
+    right: -1.5rem;
+    border-width: 0 0.5rem 0.5rem 0;
+}
+
+.about1 a {
+    padding: 1rem 1.8rem;
+    color: var(--main-color);
+    display: inline-block;
+    border: 0.2rem solid var(--main-color);
+    margin: 1rem 0;
+}
+
+.about1 a:hover {
+    color: var(--third-color);
+    background: var(--main-color);
+}
+
+
+
+.about2 {
+    width: 40%;
+    height: 50rem;
+}
+
+.about2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem var(--main-color);
+}
+
+
+
+.about4 {
+    width: 55%;
+    height: auto;
+}
+
+.about4 p {
+    font-size: 1.6rem;
+    text-align: justify;
+    color: var(--four-color);
+    letter-spacing: 0.1rem;
+    position: relative;
+    font-weight: 300;
+}
+
+
+.about4 p::before,
+.about4 p::after {
+    content: " ";
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: 0.7rem solid var(--main-color);
+    z-index: 1;
+
+}
+
+
+.about4 p::before {
+    top: -1.5rem;
+    right: -1.5rem;
+    border-width: 0.5rem 0.5rem 0 0;
+}
+
+.about4 p::after {
+    bottom: -1.5rem;
+    left: -1.5rem;
+    border-width: 0 0 0.5rem 0.5rem;
+}
+
+.about4 a {
+    padding: 1rem 1.8rem;
+    color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    margin: 1rem 0;
+    float: right;
+}
+
+.about4 a:hover {
+    color: var(--third-color);
+    background: var(--main-color);
+}
+
+.about3 {
+    width: 40%;
+    height: 50rem;
+}
+
+.about3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2rem;
+    box-shadow: -2rem 2rem var(--main-color);
+}
+
+
+#service {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url(img/bed2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 10%;
+}
+
+
+.serviceh1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--third-color);
+}
+
+.serviceh1 h1 {
+    font-weight: lighter;
+}
+
+.serviceh1 h1 span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.serviceh1 h1:before,
+.serviceh1 h1:after {
+    background-color: var(--third-color);
+    content: "";
+    display: inline-block;
+    height: 0.2rem;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+    border-radius: 1rem;
+}
+
+.serviceh1 h1:before {
+    right: 1rem;
+
+}
+
+.serviceh1 h1:after {
+    left: 2rem;
+}
+
+.service-contant {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+}
+
+.how-work {
+    width: 25rem;
+    height: 25rem;
+    background-color: rgba(255, 255, 255, 0.093);
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 0.5rem solid var(--four-color);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    margin: 1rem 0
+}
+
+.how-work:hover {
+    background-color: var(--main-color);
+    border: 0.5rem solid var(--main-color);
+}
+
+.how-work:hover i {
+    color: black;
+}
+
+.how-work:hover p {
+    color: black;
+}
+
+.how-work i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.how-work h1 {
+    font-size: 2rem;
+    color: var(--third-color);
+}
+
+.how-work p {
+    font-size: 1rem;
+    color: var(--four-color);
+    padding: 0 5%;
+}
+
+.numscroller {
+    font-size: 7rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+
+.service-para1 {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    height: auto;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.happp-serve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    height: 20rem;
+    backdrop-filter: blur(4px);
+    position: relative;
+    margin: 1rem 0;
+}
+
+.happp-serve:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 100;
+    width: 0.3rem;
+    height: 30%;
+    background: var(--third-color);
+    border-radius: .2rem;
+}
+
+.happp-serve:last-child::after {
+    display: none;
+}
+
+
+.happp-serve h1 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--third-color);
+}
+
+.happp-serve i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+
+.service-busines {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+}
+
+.our-service {
+    width: 32%;
+    height: 40rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img/kitchen2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3%;
+    box-shadow: 1rem 1rem 0.2rem var(--main-color);
+    margin: 1rem 0;
+}
+
+#our-img2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img/inspiration-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#our-img1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img/bed2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.our-service h1 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+}
+
+.our-service p {
+    font-size: 1.4rem;
+    color: var(--four-color);
+}
+
+.our-service a {
+    padding: 1rem 1.8rem;
+    color: var(--main-color);
+    display: inline-block;
+    border: 0.2rem solid var(--main-color);
+    margin: 1rem 0;
+}
+
+.our-service a:hover {
+    color: var(--third-color);
+    background: var(--main-color);
+}
+
+#project {
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url(img/furniture3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 50px 0;
+}
+
+.projecth1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--third-color);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+
+.column {
+    width: 33.3%;
+    height: 40rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.layerhover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s;
+
+}
+
+.layerhover img {
+    width: 16rem;
+    height: 6rem;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.layerhover:hover img {
+    bottom: 40%;
+    opacity: 1;
+}
+
+.layerhover:hover {
+    background: rgba(0, 0, 0, 0.50);
+}
+
+
+.client {
+    width: 100%;
+    height: 10.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.clinet-logo {
+    width: 12.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1);
+    cursor: pointer;
+    position: relative;
+}
+
+.clinet-logo img {
+    width: 10rem;
+}
+
+.clinet-logo:hover {
+    filter: grayscale(0);
+}
+
+.clinet-logo:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 100;
+    width: 0.3rem;
+    height: 10%;
+    background: var(--third-color);
+    border-radius: .2rem;
+}
+
+.clinet-logo:last-child::after {
+    display: none;
+}
+
+#contact {
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url(img/kitchen2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.contacth1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--third-color);
+    padding: 0.5rem;
+}
+
+.contacth1 h1 {
+    font-weight: lighter;
+}
+
+.contacth1 h1 span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.contacth1 h1:before,
+.contacth1 h1:after {
+    background-color: var(--third-color);
+    content: "";
+    display: inline-block;
+    height: 0.2rem;
+    position: relative;
+    vertical-align: middle;
+    width: 5%;
+    border-radius: 1rem;
+}
+
+.contacth1 h1:before {
+    right: 1rem;
+    margin-left: -50%;
+}
+
+.contacth1 h1:after {
+    left: 2rem;
+    margin-right: -50%;
+}
+
+.contact-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-inner {
+    width: 60%;
+    height: 50rem;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    color: var(--third-color);
+    backdrop-filter: blur(5px);
+    margin: 1rem 0;
+}
+
+
+
+.contact-inner-box {
+    width: 100%;
+    height: 48%;
+    color: var(--four-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.innerbox {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.innerbox h3 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.contact-inner-box i {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.contact-inner-box h1 {
+    font-size: 3rem;
+}
+
+.contact-inner-box p {
+    font-size: 1rem;
+}
+
+#inner1 {
+    width: 38%;
+    padding: 1% 2%;
+    cursor: pointer;
+}
+
+#inner1 h6 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--four-color);
+}
+
+#inner1 p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+#inner1 input {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding: 0 2%;
+    outline: none;
+    border: none;
+    border-bottom: 0.2rem solid var(--four-color);
+    color: var(--four-color);
+
+}
+
+#inner1 input:focus {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+#inner1 select:focus {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+#inner1 textarea:focus {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+
+
+
+
+#inner1 textarea {
+    width: 100%;
+    height: 12rem;
+    margin-bottom: 1rem;
+    padding: 0 2%;
+    background: none;
+    border: none;
+    border-bottom: 0.2rem solid var(--four-color);
+    color: var(--four-color);
+}
+
+#inner1 select {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding: 0 2%;
+    color: var(--four-color);
+    background: rgba(0, 0, 0, 0.50);
+    border: none;
+    border-bottom: 0.2rem solid var(--four-color);
+}
+
+#fill {
+    background: var(--four-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#fill:hover {
+    background: var(--main-color);
+}
+
+#footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer-container {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url(img/images.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+.footer1 {
+    width: 25%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    flex-wrap: wrap;
+    background: rgb(0, 0, 0);
+    padding: 0 2%;
+}
+
+.footer1 img {
+    width: 100%;
+    height: auto;
+}
+
+.footer1 h1 {
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+    color: var(--four-color);
+    font-weight: 500;
+    margin-top: 3rem;
+}
+
+.footer1 p {
+    font-size: 1.3rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+    color: var(--four-color);
+    color: #858585;
+}
+
+.footer1 ul {
+    display: block;
+    margin: 4rem 0;
+
+}
+
+.footer1 ul li {
+    padding: 0.5rem 0;
+}
+
+.footer1 ul li a {
+    font-size: 1.3rem;
+    color: #858585;
+}
+
+.footer1 ul li a:hover {
+    color: var(--main-color);
+}
+
+.footer1 h1::after {
+    content: '';
+    width: 24%;
+    height: 0.3rem;
+    background: var(--main-color);
+    display: block;
+}
+
+.footer-follow {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer-follow a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--third-color);
+}
+
+.footer-follow a:hover {
+    transform: scale(1.1);
+}
+
+.footer-follow a:hover i {
+    color: var(--main-color);
+}
+
+.footer-follow a:first-child {
+    margin-left: 0;
+}
+
+.contact p {
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 4rem 0 0 0;
+    color: var(--four-color);
+    color: #858585
+}
+
+.contact a {
+    color: #858585;
+}
+
+.contact-2 p {
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 4rem 0 0 0;
+    color: var(--four-color);
+    color: #858585
+}
+
+.input input {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    margin: 1rem 0;
+    /* padding-left: 2%; */
+}
+
+.input input {
+    padding-left: 2%;
+    background: rgba(187, 187, 187, 0.5);
+    outline: none;
+    border: none;
+    color: var(--four-color);
+    height: 4rem;
+}
+
+
+.rupesh {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 1%;
+
+}
+
+.rupesh i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+    width: 5rem;
+    height: 5rem;
+    background: #128c7e;
+    z-index: 99999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.whatsapp a {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 5rem;
+    height: 5rem;
+    background: var(--main-color);
+    z-index: 99999999999999999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--third-color);
+    display: none;
+}
+
+
+
+
+
+
+@media (max-width:991px) {
+
+
+    html {
+        font-size: 55%;
+    }
+
+  
+
+    header nav ul {
+        width: 50%;
+        height: 100vh;
+        display: block;
+        position:fixed;
+        top: 10rem;
+        right: -100%;
+        text-align: center;
+        background: var(--second-color);
+    }
+
+    header nav ul li {
+        margin: 2rem 0;
+    }
+
+    header nav ul li:first-child {
+        margin-top: 10rem;
+    }
+
+    header nav ul li a {
+        font-size: 2rem;
+    }
+
+    header nav ul li a:hover {
+        letter-spacing: 2px;
+    }
+
+    .menujs {
+        right: 0%;
+    }
+
+
+    .follow {
+        display: inline-block;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .follow a {
+        margin: 0 10px;
+        font-size: 2.3rem;
+        color: white;
+        transform: scale(1, 1);
+        padding: 10px;
+    }
+
+    .follow a:hover {
+        color: var(--main-color);
+        transform: scale(1.3, 1.3);
+    }
+
+
+
+
+    #fa-bars {
+        display: block;
+        margin: 0 0rem 0 1.5rem;
+        font-size: 3rem;
+      }
+
+
+
+    .home-form {
+        display: none;
+    }
+
+    #about {
+        width: 100%;
+        padding: 5%;
+    }
+
+
+    #service {
+        width: 100%;
+        padding: 5%;
+        height: auto;
+    }
+
+    .our-service {
+        width: 48%;
+        height: 40rem;
+    }
+
+    .our-service:last-child {
+        width: 100%;
+    }
+
+    .how-work {
+        width: 48%;
+        height: 25rem;
+        border-radius: 0%;
+        box-shadow: 1rem 1rem 0.2rem var(--main-color);
+    }
+
+    .how-work:hover {
+        box-shadow: 1rem 1rem 0.2rem var(--third-color);
+    }
+
+    .happp-serve {
+        width: 48%;
+    }
+
+    .happp-serve:nth-child(2):after {
+        display: none;
+    }
+
+    #project {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .column {
+        width: 48%;
+        margin: 1rem 0;
+    }
+
+    .column:last-child {
+        width: 100%;
+    }
+
+
+    .clinet-logo:nth-child(4)::after {
+
+        display: none;
+
+    }
+
+    .client {
+        width: 100%;
+        height: 21rem;
+    }
+
+    .clinet-logo {
+        width: 25%;
+        height: 50%;
+    }
+
+    #contact {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .footer1 {
+        width: 50%;
+        height: 35rem;
+    }
+
+
+}
+
+@media (max-width:768px) {
+
+    html {
+        font-size: 51%;
+    }
+
+    header{
+        margin-top: 0;
+    }
+
+    .topbar{
+        display: none;
+    }
+
+
+
+    .about1 {
+        width: 45%;
+    }
+
+    .about2 {
+        width: 50%;
+    }
+
+    .about4 {
+        width: 45%;
+    }
+
+    .about3 {
+        width: 50%;
+    }
+
+
+
+
+}
+
+@media (max-width:500px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    header img.logo {
+        width: 50%;
+    }
+
+    .follow a {
+        margin: 0px;
+        font-size: 2.3rem;
+        color: white;
+        transform: scale(1, 1);
+        padding: 10px;
+      }
+
+
+    #about {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .about1 {
+        width: 100%;
+    }
+
+    .txt h1 span {
+        font-size: 50px;
+    }
+
+    .about2 {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .about2 img {
+        box-shadow: none;
+    }
+
+    .about4 {
+        width: 100%;
+        margin: 5rem 0 0 0;
+    }
+
+    .about3 {
+        width: 100%;
+    }
+
+    .about3 img {
+        box-shadow: none;
+    }
+
+    #service {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        padding: 5%;
+    }
+
+    .our-service {
+        width: 100%;
+    }
+
+
+    .happp-serve {
+        width: 100%;
+    }
+
+    .how-work {
+        width: 100%;
+    }
+
+    .happp-serve:nth-child(1)::after {
+        display: none;
+    }
+
+    .happp-serve:nth-child(3)::after {
+        display: none;
+    }
+
+    #project {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        padding: 5%;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    #contact {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        padding: 5%;
+    }
+
+    .contact-inner {
+        width: 100%;
+    }
+
+    #inner1 {
+        width: 100%;
+    }
+
+    #footer {
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 0;
+        background: none;
+    }
+
+    .footer1 {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:360px) {
+
+
+    .topbar-contact ul li a {
+        font-size: 5px;
+    }
+
+    .abouth1 {
+        font-size: 3rem;
+    }
+
+    .serviceh1 {
+        font-size: 3rem;
+    }
+}
